@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100vh;
+  color: #61dafb;
+  background: #2d2d2d;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+    top: 2em;
+}
+
+.main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li:hover {
+  background-color: #444444;
+}
+
+.btn-close {
+    margin-left: 1em;
+    border: 2px solid rgba(173, 173, 173, 0.897)
+}
