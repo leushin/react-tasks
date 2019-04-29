@@ -20,8 +20,7 @@ class TodoApp extends React.Component {
         ...this.state.todoItems,
         {
           index: this.state.todoItems.length + 1,
-          value: todoItem,
-          done: false
+          value: todoItem
         }
       ]
     });
