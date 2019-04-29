@@ -79,35 +79,32 @@ class TodoListItem extends React.Component {
 class TodoForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      inputValue: ""
-    };
+    // ref on input
+    this.textInput = React.createRef()
   }
   // listener on input area
-  changeInputTodo = e =>
-    this.setState({
-      inputValue: e.target.value
-    });
+  focusInput = () => {
+    this.textInput.current.focus();
+  }
 
   onSubmit = e => {
     e.preventDefault();
-    if (this.state.inputValue) this.props.addTodo(this.state.inputValue);
-    this.setState({
-      inputValue: "" // clear input
-    });
+    if (this.textInput.current.value)
+    this.props.addTodo(this.textInput.current.value);
+    this.textInput.current.value=""; // clear input area
   };
 
   render() {
+    console.log('rerender')
     return (
       <form className="form" onSubmit={this.onSubmit}>
         <input
           type="text"
+          ref={this.textInput}
           className="input-todo"
-          value={this.state.inputValue}
-          onChange={this.changeInputTodo}
           placeholder="add a new todo..."
         />
-        <button type="submit" className="btn-add">
+        <button type="submit" className="btn-add" onClick={this.focusInput}>
           Add
         </button>
       </form>
