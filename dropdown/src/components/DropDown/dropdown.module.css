@@ -1,0 +1,10 @@
+.dropdown {
+    position: absolute;
+    display: block;
+    border: 1px solid rgb(190, 252, 203);
+    text-align: center;
+    width: 20%;
+    height: max-content;
+    left: 40%;
+    top: 30vh;
+}

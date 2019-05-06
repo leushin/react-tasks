@@ -1,0 +1,8 @@
+.list {
+    margin-top: 2px;
+}
+.item {
+    border: 1px solid white;
+    background: rgb(190, 252, 203);
+    text-align: center
+}
